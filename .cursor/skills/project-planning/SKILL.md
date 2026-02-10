@@ -38,6 +38,19 @@ These are non-negotiable for this workshop. If a user's request would violate on
 - No routing libraries needed — these are single-page apps
 - No state management libraries — React's built-in `useState` and `useRef` are plenty
 
+### Scale down ambitious ideas
+
+If a user proposes something too complex, **don't just say no** — suggest a simpler version that captures the same spirit. Keep the fun, lose the complexity.
+
+| They want... | Suggest instead... | Why it works |
+|---|---|---|
+| Multiplayer battle game with lobbies | Two-player Pong on the same keyboard | Still competitive, no networking needed |
+| Spotify clone with playlists and streaming | Soundboard with clickable buttons that play short audio clips | Still about music, instant gratification |
+| E-commerce store with cart and checkout | Fake product catalog you can browse and "favorite" | Same visual feel, state lives in a variable |
+| Wordle with daily words from a server | Wordle with a hardcoded word list and `Math.random()` | Identical gameplay, zero infrastructure |
+
+**The pattern:** take the core interaction that makes it fun (clicking, competing, creating) and strip away everything that needs a server, accounts, or real-time sync.
+
 ## What to do instead of a backend
 
 When a feature "wants" a backend, use these frontend patterns:
