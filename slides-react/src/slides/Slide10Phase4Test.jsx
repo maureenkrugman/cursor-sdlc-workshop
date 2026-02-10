@@ -20,23 +20,17 @@ const Slide10Phase4Test = () => (
           <div className="check-header">
             <div className="check-box"></div>
             <div>
-              <strong>Switch to main</strong> — go back to the official version
+              <strong>Tell Cursor to sync and pull everything</strong>
             </div>
           </div>
           <div className="code-block">
-            <code>git checkout main</code>
-          </div>
-        </div>
-        <div className="check-item has-code">
-          <div className="check-header">
-            <div className="check-box"></div>
-            <div>
-              <strong>Pull latest</strong> — sync the complete project with all
-              features to your computer
-            </div>
-          </div>
-          <div className="code-block">
-            <code>git pull origin main</code>
+            <code>
+              <span className="comment">Ask Cursor:</span>
+              <br />
+              "Sync my fork with upstream, switch to main,
+              <br />
+              and pull all the latest changes"
+            </code>
           </div>
         </div>
       </div>

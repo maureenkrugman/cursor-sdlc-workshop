@@ -18,17 +18,12 @@ This folder is where your project code lives.
 
 ### Instructions
 
-1. Read the `prd.md` in your team folder
-2. Use Cursor to generate the base MVP
-3. Put all the code files here
-4. Make sure it runs locally before committing
+1. Tell Cursor to read the `prd.md` in your team folder
+2. Tell Cursor to generate the base MVP here
+3. Tell Cursor to run it locally and verify it works
 
 ### After You're Done
 
-```bash
-git add .
-git commit -m "[Team] - Base MVP scaffold"
-git push origin [team]/base-mvp
-```
+> **Ask Cursor:** "Commit all my changes with the message '[Team] - Base MVP scaffold', push to my fork, and open a PR to the original repo"
 
-Then open a PR and merge it so your teammates can build on top of it!
+Once the PR is merged, your teammates can build on top of it!

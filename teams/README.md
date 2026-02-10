@@ -10,9 +10,11 @@ There are **20 team slots** available: `team_0` through `team_19`.
 
 ### How to Claim
 
-1. Pick an unclaimed team number (coordinate with your team!)
-2. Add your team members to `teams/team_X/members/`
-3. Create your PRD and project files in your team folder
+1. **Tell Cursor** to fork the workshop repo, clone your fork, and create a branch
+2. Pick an unclaimed team number (coordinate with your team!)
+3. **Tell Cursor** to add your team members to `teams/team_X/members/`
+4. **Tell Cursor** to help fill out the PRD in your team folder
+5. **Tell Cursor** to commit, push, and open a PR to the original repo
 
 ### ⚠️ Warning
 

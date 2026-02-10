@@ -21,24 +21,19 @@ const Slide08Phase2Design = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Pull latest</strong> — sync the official project to your
-                computer
+                <strong>Tell Cursor to sync and create a branch</strong>
               </div>
             </div>
             <div className="code-block">
-              <code>git pull origin main</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Create a branch</strong> — make your own sandbox you can
-                safely play in until you're ready to share
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git checkout -b [team]/base-mvp</code>
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Sync my fork with the upstream repo, pull the
+                <br />
+                latest changes, and create a branch called
+                <br />
+                [team]/base-mvp"
+              </code>
             </div>
           </div>
         </div>
@@ -76,42 +71,20 @@ const Slide08Phase2Design = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Stage your changes</strong> — decide which files you
-                want to share with the team
+                <strong>Tell Cursor to commit, push, and open a PR</strong>
+                {' '}— this becomes the foundation for everyone
               </div>
             </div>
             <div className="code-block">
-              <code>git add .</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Commit</strong> — create a description of what you built
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git commit -m "[Team] - Base MVP scaffold"</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Push</strong> — propose your sandbox be added to the
-                single-source-of-truth on GitHub
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git push origin [team]/base-mvp</code>
-            </div>
-          </div>
-          <div className="check-item">
-            <div className="check-box"></div>
-            <div>
-              <strong>Open PR and merge</strong> — this becomes the foundation
-              for everyone
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Commit all my changes with the message
+                <br />
+                '[Team] - Base MVP scaffold',
+                <br />
+                push to my fork, and open a PR to the original repo"
+              </code>
             </div>
           </div>
         </div>

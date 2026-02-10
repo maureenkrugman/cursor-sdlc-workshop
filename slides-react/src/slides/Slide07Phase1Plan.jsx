@@ -14,73 +14,64 @@ const Slide07Phase1Plan = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Clone the repo</strong> — download a copy of the project
-                to your computer
+                <strong>Tell Cursor to fork &amp; clone the repo</strong> — this
+                creates your own copy and downloads it
               </div>
             </div>
             <div className="code-block">
               <code>
-                git clone [REPO_URL]
+                <span className="comment">Ask Cursor:</span>
                 <br />
-                cd sdlc-workshop
+                "Fork this repo [REPO_URL], clone my fork,
+                <br />
+                and create a branch called [team]/setup"
               </code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Create a branch</strong> — make your own sandbox you can
-                safely play in until you're ready to share
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git checkout -b [team]/setup</code>
             </div>
           </div>
         </div>
 
         {/* IN CURSOR */}
         <div className="check-group work section1">
-          <div className="check-group-label">In Cursor</div>
+          <div className="check-group-label">Tell Cursor</div>
           <div className="check-item has-code">
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Create your team folder</strong>
-              </div>
-            </div>
-            <div className="code-block">
-              <code>mkdir teams/[your-team-name]</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Each person: Add yourself to team members</strong>
+                <strong>Claim your team folder</strong> &amp;{' '}
+                <strong>add yourself</strong>
               </div>
             </div>
             <div className="code-block">
               <code>
-                <span className="comment">
-                  # Create teams/[team]/members/[your-name].md
-                </span>
+                <span className="comment">Ask Cursor:</span>
                 <br />
-                # [Your Name]
+                "Add me to team_[X]. Create my member file
                 <br />
-                **Role:** [AE/FE/ADM]
+                in teams/team_[X]/members/[your-name].md.
                 <br />
-                **Fun fact:** [Something about you]
+                My role is [AE/FE/ADM] and a fun fact is [...]"
               </code>
             </div>
           </div>
-          <div className="check-item">
-            <div className="check-box"></div>
-            <div>
-              <strong>Create a PRD</strong> with{' '}
-              <span className="highlight">5 specific tasks</span> (one per team
-              member, assigned by name)
+          <div className="check-item has-code">
+            <div className="check-header">
+              <div className="check-box"></div>
+              <div>
+                <strong>Create a PRD</strong> with{' '}
+                <span className="highlight">5 specific tasks</span> (one per
+                team member, assigned by name)
+              </div>
+            </div>
+            <div className="code-block">
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Read the prd.md template in our team folder
+                <br />
+                and help us fill it out. We want to build [idea].
+                <br />
+                Our team members are [names]."
+              </code>
             </div>
           </div>
         </div>
@@ -92,42 +83,19 @@ const Slide07Phase1Plan = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Stage your changes</strong> — decide which files you
-                want to share with the team
+                <strong>Tell Cursor to commit, push, and open a PR</strong>
               </div>
             </div>
             <div className="code-block">
-              <code>git add .</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Commit</strong> — create a description of what you built
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git commit -m "[Team] - Initial setup and PRD"</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Push</strong> — propose your sandbox be added to the
-                single-source-of-truth on GitHub
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git push origin [team]/setup</code>
-            </div>
-          </div>
-          <div className="check-item">
-            <div className="check-box"></div>
-            <div>
-              <strong>Open a PR</strong> — let teammates confirm they want your
-              changes to become officially part of the real project
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Commit all my changes with the message
+                <br />
+                '[Team] - Initial setup and PRD',
+                <br />
+                push to my fork, and open a PR to the original repo"
+              </code>
             </div>
           </div>
         </div>

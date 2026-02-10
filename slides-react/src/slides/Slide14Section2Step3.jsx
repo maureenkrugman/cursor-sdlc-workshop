@@ -14,12 +14,17 @@ const Slide14Section2Step3 = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Create a branch</strong> — make your own sandbox you can
-                safely play in until you're ready to share
+                <strong>Tell Cursor to create a branch</strong>
               </div>
             </div>
             <div className="code-block">
-              <code>git checkout -b [your-team]/adds-[feature]</code>
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Create a new branch called
+                <br />
+                [your-team]/adds-[feature]"
+              </code>
             </div>
           </div>
         </div>
@@ -55,42 +60,20 @@ const Slide14Section2Step3 = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Stage your changes</strong> — decide which files you
-                want to share with the team
+                <strong>Tell Cursor to commit, push, and open a PR</strong>
+                {' '}— then watch BugBot review your code
               </div>
             </div>
             <div className="code-block">
-              <code>git add .</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Commit</strong> — create a description of what you built
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git commit -m "Add [feature]"</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Push</strong> — propose your sandbox be added to the
-                single-source-of-truth on GitHub
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git push origin [your-team]/adds-[feature]</code>
-            </div>
-          </div>
-          <div className="check-item">
-            <div className="check-box"></div>
-            <div>
-              <strong>Open a PR</strong> — let teammates confirm they want your
-              changes, and watch BugBot review your code
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Commit my changes with the message
+                <br />
+                'Add [feature]', push to my fork,
+                <br />
+                and open a PR to the original repo"
+              </code>
             </div>
           </div>
         </div>

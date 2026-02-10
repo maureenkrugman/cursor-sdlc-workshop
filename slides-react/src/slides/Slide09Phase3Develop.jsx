@@ -19,24 +19,19 @@ const Slide09Phase3Develop = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Pull latest</strong> — sync the official project
-                (including the MVP) to your computer
+                <strong>Tell Cursor to sync and create your branch</strong>
               </div>
             </div>
             <div className="code-block">
-              <code>git pull origin main</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Create your branch</strong> — make your own sandbox you
-                can safely play in until you're ready to share
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git checkout -b [your-name]/[feature]</code>
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Sync my fork with upstream, pull the latest,
+                <br />
+                and create a branch called
+                <br />
+                [your-name]/[feature]"
+              </code>
             </div>
           </div>
         </div>
@@ -73,42 +68,19 @@ const Slide09Phase3Develop = () => (
             <div className="check-header">
               <div className="check-box"></div>
               <div>
-                <strong>Stage your changes</strong> — decide which files you
-                want to share with the team
+                <strong>Tell Cursor to commit, push, and open a PR</strong>
               </div>
             </div>
             <div className="code-block">
-              <code>git add .</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Commit</strong> — create a description of what you built
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git commit -m "Add [feature]"</code>
-            </div>
-          </div>
-          <div className="check-item has-code">
-            <div className="check-header">
-              <div className="check-box"></div>
-              <div>
-                <strong>Push</strong> — propose your sandbox be added to the
-                single-source-of-truth on GitHub
-              </div>
-            </div>
-            <div className="code-block">
-              <code>git push origin [your-name]/[feature]</code>
-            </div>
-          </div>
-          <div className="check-item">
-            <div className="check-box"></div>
-            <div>
-              <strong>Open a PR</strong> — let teammates confirm they want your
-              changes to become officially part of the real project
+              <code>
+                <span className="comment">Ask Cursor:</span>
+                <br />
+                "Commit my changes with the message
+                <br />
+                'Add [feature]', push to my fork,
+                <br />
+                and open a PR to the original repo"
+              </code>
             </div>
           </div>
         </div>

@@ -753,7 +753,7 @@
                 <div class="key-point green">
                     <div class="key-point-icon">🤝</div>
                     <div class="key-point-text">
-                        Practice <span class="highlight-green">git workflow</span>: clone, commit, push, PR, review
+                        Practice <span class="highlight-green">git workflow</span>: fork, clone, commit, push, PR, review
                     </div>
                 </div>
             </div>
@@ -773,34 +773,30 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Clone the workshop repository</strong></div>
+                            <div><strong>Tell Cursor to fork &amp; clone the repo</strong></div>
                         </div>
-                        <div class="code-block"><code>git clone [REPO_URL]<br>cd sdlc-workshop</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Fork this repo [REPO_URL], clone my fork,<br>and create a branch called [team]/setup"</code></div>
                     </div>
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Create your team folder</strong></div>
+                            <div><strong>Tell Cursor to claim your team &amp; add yourself</strong></div>
                         </div>
-                        <div class="code-block"><code>mkdir teams/[your-team-name]</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Add me to team_[X]. Create my member file<br>in teams/team_[X]/members/[your-name].md.<br>My role is [AE/FE/ADM] and a fun fact is [...]"</code></div>
                     </div>
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Each person: Add yourself to team members</strong></div>
+                            <div><strong>Tell Cursor to create a PRD</strong> with <span class="highlight">5 specific tasks</span> (one per person)</div>
                         </div>
-                        <div class="code-block"><code><span class="comment"># Create teams/[team]/members/[your-name].md</span><br># [Your Name]<br>**Role:** [AE/FE/ADM]<br>**Fun fact:** [Something about you]</code></div>
-                    </div>
-                    <div class="check-item">
-                        <div class="check-box"></div>
-                        <div><strong>Create a PRD</strong> with <span class="highlight">5 specific tasks</span> (one per team member, assigned by name)</div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Read the prd.md template in our team folder<br>and help us fill it out. We want to build [idea].<br>Our team members are [names]."</code></div>
                     </div>
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Commit, push, and open a PR</strong></div>
+                            <div><strong>Tell Cursor to commit, push, and open a PR</strong></div>
                         </div>
-                        <div class="code-block"><code>git add .<br>git commit -m "[Team] - Initial setup and PRD"<br>git push origin main</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Commit all my changes with the message<br>'[Team] - Initial setup and PRD',<br>push to my fork, and open a PR to the original repo"</code></div>
                     </div>
                 </div>
             </div>
@@ -824,17 +820,17 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Pull latest changes</strong></div>
+                            <div><strong>Tell Cursor to sync and create a branch</strong></div>
                         </div>
-                        <div class="code-block"><code>git pull origin main</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Sync my fork with the upstream repo, pull the latest<br>changes, and create a branch called [team]/base-mvp"</code></div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>
-                        <div><strong>ONE PERSON:</strong> Create the base MVP application using Cursor</div>
+                        <div><strong>ONE PERSON:</strong> Tell Cursor to create the base MVP from <em>prd.md</em></div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>
-                        <div><strong>Run locally</strong> — Ask Cursor: <em>"How do I run this project?"</em></div>
+                        <div><strong>Tell Cursor to run it locally</strong> — <em>"How do I run this project?"</em></div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>
@@ -843,9 +839,9 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Merge the base MVP</strong> — this becomes the foundation</div>
+                            <div><strong>Tell Cursor to commit, push, and open a PR</strong> — this becomes the foundation</div>
                         </div>
-                        <div class="code-block"><code>git add .<br>git commit -m "[Team] - Base MVP scaffold"<br>git push origin main</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Commit all my changes with the message<br>'[Team] - Base MVP scaffold',<br>push to my fork, and open a PR to the original repo"</code></div>
                     </div>
                 </div>
             </div>
@@ -865,13 +861,13 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Wait for Phase 2 merge, then pull</strong></div>
+                            <div><strong>Tell Cursor to sync and create your branch</strong></div>
                         </div>
-                        <div class="code-block"><code>git pull origin main</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Sync my fork with upstream, pull the latest,<br>and create a branch called [your-name]/[feature]"</code></div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>
-                        <div><strong>Ask Cursor to run the project</strong> — verify base works first</div>
+                        <div><strong>Tell Cursor to run the project</strong> — verify base MVP works first</div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>
@@ -884,13 +880,9 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Create branch, commit, push</strong></div>
+                            <div><strong>Tell Cursor to commit, push, and open a PR</strong></div>
                         </div>
-                        <div class="code-block"><code>git checkout -b [your-name]/[feature]<br>git add .<br>git commit -m "Add [feature]"<br>git push origin [your-name]/[feature]</code></div>
-                    </div>
-                    <div class="check-item">
-                        <div class="check-box"></div>
-                        <div><strong>Open PR</strong> and get teammate to review</div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Commit my changes with the message 'Add [feature]',<br>push to my fork, and open a PR to the original repo"</code></div>
                     </div>
                 </div>
             </div>
@@ -913,13 +905,13 @@
                 <div class="check-item has-code">
                     <div class="check-header">
                         <div class="check-box"></div>
-                        <div><strong>Pull the complete project</strong></div>
+                        <div><strong>Tell Cursor to sync and pull everything</strong></div>
                     </div>
-                    <div class="code-block"><code>git checkout main<br>git pull origin main</code></div>
+                    <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Sync my fork with upstream, switch to main,<br>and pull all the latest changes"</code></div>
                 </div>
                 <div class="check-item">
                     <div class="check-box"></div>
-                    <div><strong>Run the full application</strong></div>
+                    <div><strong>Tell Cursor to run the full application</strong></div>
                 </div>
                 <div class="check-item">
                     <div class="check-box"></div>
@@ -1040,6 +1032,13 @@
             <h2>✨ Build Something New</h2>
             <div class="scrollable">
                 <div class="checklist">
+                    <div class="check-item has-code">
+                        <div class="check-header">
+                            <div class="check-box"></div>
+                            <div><strong>Tell Cursor to create a branch</strong></div>
+                        </div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Create a new branch called [your-team]/adds-[feature]"</code></div>
+                    </div>
                     <div class="check-item">
                         <div class="check-box"></div>
                         <div><strong>Decide on a feature</strong> — something small but visible</div>
@@ -1055,9 +1054,9 @@
                     <div class="check-item has-code">
                         <div class="check-header">
                             <div class="check-box"></div>
-                            <div><strong>Create branch, commit, push, open PR</strong></div>
+                            <div><strong>Tell Cursor to commit, push, and open a PR</strong></div>
                         </div>
-                        <div class="code-block"><code>git checkout -b [your-team]/adds-[feature]<br>git add .<br>git commit -m "Add [feature]"<br>git push origin [your-team]/adds-[feature]</code></div>
+                        <div class="code-block"><code><span class="comment">Ask Cursor:</span><br>"Commit my changes with the message 'Add [feature]',<br>push to my fork, and open a PR to the original repo"</code></div>
                     </div>
                     <div class="check-item">
                         <div class="check-box"></div>

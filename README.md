@@ -63,30 +63,45 @@ Plan  →  Design  →  Develop  →  Test  →  Review  →  Deploy
 
 ---
 
-## The Git Sandwich
+## The Git Sandwich (Agent-First)
 
-A core teaching of this workshop is the **Git Sandwich** pattern—the idea that all productive work is wrapped in git operations:
+A core teaching of this workshop is the **Git Sandwich** pattern—the idea that all productive work is wrapped in git operations. But participants don't need to memorize commands. **They tell the Cursor agent what they want.**
+
+Since participants aren't collaborators on the workshop repo, they fork it first (the agent handles this).
+
+### Fork Setup (One Time)
+```
+┌─────────────────────────────────────────────────────────┐
+│  Ask Cursor:                                            │
+│  "Fork this repo [URL], clone my fork,                  │
+│   and create a branch called [team]/setup"              │
+└─────────────────────────────────────────────────────────┘
+```
+
+### The Git Sandwich (Every Task)
 
 ```
-┌─────────────────────────────────┐
-│  START                          │  ← Pull latest, create branch
-│  git checkout -b feature        │
-└─────────────────────────────────┘
-              ↓
-┌─────────────────────────────────┐
-│  WORK                           │  ← Write code, create files
-│  (This is the important part)   │
-└─────────────────────────────────┘
-              ↓
-┌─────────────────────────────────┐
-│  FINISH                         │  ← Commit, push, PR, merge
-│  git add . && git commit        │
-│  git push && open PR            │
-└─────────────────────────────────┘
-              ↓
-┌─────────────────────────────────┐
-│  SYNC                           │  ← git pull origin main
-└─────────────────────────────────┘
+┌─────────────────────────────────────────────────────────┐
+│  START — Ask Cursor:                                    │
+│  "Sync my fork with upstream, pull the latest,          │
+│   and create a branch called [name]"                    │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│  WORK                                                   │
+│  (Tell Cursor what to build — this is the fun part)     │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│  FINISH — Ask Cursor:                                   │
+│  "Commit my changes with message '[description]',       │
+│   push to my fork, and open a PR to the original repo"  │
+└─────────────────────────────────────────────────────────┘
+                          ↓
+┌─────────────────────────────────────────────────────────┐
+│  SYNC — Ask Cursor:                                     │
+│  "Sync my fork with upstream and pull the latest"       │
+└─────────────────────────────────────────────────────────┘
 ```
 
 This pattern is reinforced throughout the workshop slides.
@@ -152,9 +167,9 @@ Participants install their development environment:
 Teams build a simple application from scratch.
 
 **Phase 1 — Plan** (10 min)
-- Clone repo, create team folder
+- Fork repo, clone your fork, create team folder
 - Write PRD with MVP + 5 tasks (one per person)
-- Practice full git workflow: branch → work → PR → merge
+- Practice full git workflow: fork → branch → work → PR → merge
 
 **Phase 2 — Design** (10 min)
 - ONE person creates base MVP
