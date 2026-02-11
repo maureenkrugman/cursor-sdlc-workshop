@@ -28,6 +28,23 @@
       border-radius: 50%;
       background: #e0e7ff;
       margin-bottom: 2rem;
+      transition: transform 4s ease-in-out, background-color 4s ease-in-out;
+    }
+    /* Breathe in: circle grows and lightens */
+    .breath-visual.inhale {
+      transform: scale(2);
+      background-color: #c7d2fe;
+    }
+    /* Hold: circle stays large (same scale as inhale, no transition needed) */
+    .breath-visual.hold {
+      transform: scale(2);
+      background-color: #c7d2fe;
+      transition: none;
+    }
+    /* Breathe out: circle shrinks back and deepens */
+    .breath-visual.exhale {
+      transform: scale(1);
+      background-color: #e0e7ff;
     }
     .controls { display: flex; gap: 1rem; }
     button {
@@ -55,21 +72,27 @@
     const cueEl = document.getElementById('cue');
     const startBtn = document.getElementById('start');
     const stopBtn = document.getElementById('stop');
+    const breathEl = document.getElementById('breath-visual');
 
     const INHALE = 4, HOLD = 4, EXHALE = 4;
     let timeoutId = null;
     let isRunning = false;
 
+    // Map each phase to a CSS class for the breathing animation
     const phases = [
-      { label: 'Breathe in', duration: INHALE },
-      { label: 'Hold', duration: HOLD },
-      { label: 'Breathe out', duration: EXHALE }
+      { label: 'Breathe in', duration: INHALE, className: 'inhale' },
+      { label: 'Hold', duration: HOLD, className: 'hold' },
+      { label: 'Breathe out', duration: EXHALE, className: 'exhale' }
     ];
 
     function runPhase(phaseIndex) {
       if (!isRunning) return;
       const phase = phases[phaseIndex];
       cueEl.textContent = phase.label;
+
+      // Remove previous animation class, then apply the current one
+      breathEl.classList.remove('inhale', 'hold', 'exhale');
+      breathEl.classList.add(phase.className);
 
       timeoutId = setTimeout(() => {
         const next = (phaseIndex + 1) % phases.length;
@@ -92,6 +115,8 @@
       cueEl.textContent = 'Click Start to begin';
       startBtn.disabled = false;
       stopBtn.disabled = true;
+      // Reset the circle to its resting state
+      breathEl.classList.remove('inhale', 'hold', 'exhale');
     }
 
     startBtn.addEventListener('click', start);
